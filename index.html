@@ -285,11 +285,13 @@
 
         /* your photo on the left */
         .postcard-photo {
-            background-image: url('me.jpeg');
+            background-image: url('me.jpg');
             background-size: cover;
             background-position: center top;
             filter: sepia(15%) saturate(0.9) brightness(0.95);
             position: relative;
+            margin: 10px 8px 10px 10px;
+            will-change: transform;
         }
 
         .postcard-photo::after {
@@ -323,14 +325,6 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-        }
-
-        .postcard-label {
-            font-family: 'Cormorant Garamond', serif;
-            font-style: italic;
-            font-size: 0.6rem;
-            color: #8A7860;
-            letter-spacing: 0.06em;
         }
 
         .postcard-stamp {
@@ -379,7 +373,7 @@
         .postcard-greeting {
             font-family: 'Dawning of a New Day', cursive;
             font-size: 0.95rem;
-            color: #4A7A52;
+            color: #3A3530;
         }
 
         .postcard-lines {
@@ -414,12 +408,12 @@
                 <!-- postcard slides out from inside -->
                 <div class="postcard">
                     <div class="postcard-photo">
-                        <span class="postcard-photo-label">Vancouver, BC</span>
                     </div>
                     <div class="postcard-right">
                         <div class="postcard-top">
-                            <div class="postcard-label">Postcard</div>
-                            <div class="postcard-stamp">🐰</div>
+                            <div class="postcard-stamp">
+                                <img src="miffy_sticker.png" style="width:28px;height:28px;object-fit:contain;" />
+                            </div>
                         </div>
                         <div>
                             <div class="postcard-name">Salma <em>Yazki</em></div>
@@ -434,7 +428,9 @@
                 </div>
 
                 <div class="env-body">
-                    <div class="env-stamp">🐰</div>
+                    <div class="env-stamp">
+                        <img src="miffy_sticker.png" style="width:40px;height:40px;object-fit:contain;" />
+                    </div>
                     <div class="env-address">
                         <div class="env-address-line">To: you</div>
                         <div class="env-address-line">From: Vancouver, BC</div>
